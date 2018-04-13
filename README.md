@@ -3,9 +3,9 @@
 Lógica para cálculo de saldo atual em conta. 
 
 ## Decrição
-Dado dois arquivos cvc's: contas.cvc, transacoes.cvc, cujo formatos são:
+Dado dois arquivos csv's: contas.csv, transacoes.csv, cujo formatos são:
 
-1. contas.cvc
+1. contas.csv
 ```
 idConta,saldoAtual
 1,2000
@@ -13,7 +13,7 @@ idConta,saldoAtual
 
 ```
 
-2. transacoes.cvc
+2. transacoes.csv
 ```
 idConta,valorTransacao
 1,2012
@@ -42,7 +42,7 @@ O programa deve aplicar as transações na conta relacionada, e se, ao aplicar u
 ## Uso
 
 Após processo de instalação, faça
-1. ./transactions-test data/contas.cvc data/transacoes.cvc
+1. ./transactions-test data/contas.csv data/transacoes.csv
 
 ## TODO
 1. Analisar o uso do padrão de projeto Money em relação a lib Decimal
