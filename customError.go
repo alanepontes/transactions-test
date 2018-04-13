@@ -10,5 +10,5 @@ type CustomError struct {
 }
 
 func (e *CustomError) Error() string {
-	return fmt.Sprintf("%s - %s", e.argument, e.text)
+    return fmt.Sprintf("%s - %s", e.argument, e.text)
 }

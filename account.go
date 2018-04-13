@@ -2,7 +2,7 @@ package main
 
 import (
     "strconv"
-		"github.com/shopspring/decimal"
+	"github.com/shopspring/decimal"
 )
 
 const fine float64 = 5.0
@@ -42,9 +42,9 @@ func filterTransactions(accountId int, transactions []Transaction) []Transaction
 	var passed []Transaction
 
 	for _, transaction := range(transactions) {
-			if (transaction.Id == accountId) {
-					passed = append(passed, transaction)
-			}
+		if (transaction.Id == accountId) {
+			passed = append(passed, transaction)
+		}
 	}
 	return passed
 }
@@ -53,10 +53,10 @@ func appliedTransactions(balance int, transactions []Transaction) decimal.Decima
 	currentBalance := FormatToMoney(balance)
 	
 	for _, transaction := range(transactions) {
-		  currentBalance = decimal.Sum(currentBalance, FormatToMoney(transaction.Value))
-			if (hasFine(currentBalance)) {
-					currentBalance = applyFine(currentBalance)
-			}
+		currentBalance = decimal.Sum(currentBalance, FormatToMoney(transaction.Value))
+        if (hasFine(currentBalance)) {
+            currentBalance = applyFine(currentBalance)
+        }
 	}
 	return currentBalance
 }
@@ -64,7 +64,7 @@ func appliedTransactions(balance int, transactions []Transaction) decimal.Decima
 func CurrentBalance(accountId int, balance int, transactions []Transaction) decimal.Decimal {
 	transactionsInAccount := filterTransactions(accountId, transactions)
 	if (len(transactionsInAccount) == 0) {
-			return FormatToMoney(balance)
+		return FormatToMoney(balance)
 	}
 	return appliedTransactions(balance, transactionsInAccount)
 }
