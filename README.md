@@ -29,9 +29,11 @@ O programa deve aplicar as transações na conta relacionada, e se, ao aplicar u
 
 ## Instalação
 
-1. git clone https://github.com/alanepontes/transactions-test
-2. go get
-2. go build
+1. mkdir -p $GOPATH/src/ (Opcional)
+2. cd $GOPATH/src/ (Opcional)
+3. go get github.com/alanepontes/transactions-test
+4. go get para pegar as dependencias
+5. go build
 
 ## Testes
 
